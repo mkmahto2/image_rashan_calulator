@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 from openpyxl import load_workbook
 
@@ -59,3 +60,6 @@ rate_excel_path = 'rate_list.xlsx'  # Path to the rate Excel file
 output_excel_path = 'final_bill.xlsx'  # Output Excel file for the final bill
 
 merge_product_and_rate(product_excel_path, rate_excel_path, output_excel_path)
+
+
+os.system("python print2pdf.py")
